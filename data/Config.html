@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="config.css">
+    <script>
+        function validateServerIP() {
+            var serverIPInput = document.getElementById('serverIP');
+            var serverIP = serverIPInput.value.trim();
+
+            var ipv4Regex = /^(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})){3}$/;
+
+            if (ipv4Regex.test(serverIP)) {
+                return true;
+            } else {
+                alert('Invalid Server IP. Please enter a valid IPv4 address.');
+
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="info">
+            <h3>Network settings</h3>
+            <form action="/networkconfig" method="POST" onsubmit="return validateServerIP()">
+                <div class="formInput">
+                    <label for="ssid">SSID</label>
+                    <input type="text" name="ssid" value=%SSID%>
+                </div>
+                <div class="formInput">
+                    <label for="password">Password</label>
+                    <input type="password" name="password">
+                </div>
+                <div class="formInput">
+                    <label for="serverIP">ServerIP</label>
+                    <input type="text" name="serverIP" id="serverIP" value=%SERVERIP%>
+                </div>
+                <div class="formInput">
+                    <label for="ApiKey">Api Key</label>
+                    <input type="text" name="ApiKey" value=%APIKEY%>
+                </div>
+                <div class="infoSubmit">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+        <div class="info">
+            <h3>Device settings</h1>
+                <form action="/deviceconfig" method="POST">
+                    <div class="formInput">
+                        <label for="DeviceName">Device name</label>
+                        <input type="text" name="DeviceName" value="%DEVICENAME%">
+                    </div>
+
+                    <div class="formInput">
+                        <label for="DeviceLogin">Device Login</label>
+                        <input type="text" name="DeviceLogin">
+                        <div class="formInput">
+                        </div>
+                        <label for="DevicePassword">Device Password</label>
+                        <input type="password" name="DevicePassword">
+                    </div>
+
+                    <div class="infoSubmit">
+                        <input type="submit" value="Submit">
+                    </div>
+
+                </form>
+        </div>
+        <div class="buttons">
+            <a id="reset" href="/reset">
+                Reset settings
+            </a>
+            <a id="restart" href="/restart">
+                Restart device
+            </a>
+            <a id="logout" href="/logout">
+                Logout
+            </a>
+        </div>
+
+
+
+
+
+    </div>
+</body>
+
+</html>

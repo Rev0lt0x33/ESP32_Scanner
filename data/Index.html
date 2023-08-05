@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        .loginForm {
+
+            text-align: center;
+            padding: 55px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0px 0px 42px -24px rgba(66, 68, 90, 0.6);
+
+        }
+
+        .loginHeader {
+            margin-bottom: 40px;
+            font-size: 25px;
+            letter-spacing: .1rem;
+        }
+
+        input[type=text],
+        select {
+            font-size: 15px;
+            width: 100%;
+            padding: 8px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=password],
+        select {
+            font-size: 15px;
+            width: 100%;
+            padding: 8px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .loginButton {
+            background: none;
+            padding: 8px;
+            border: none;
+            background-color: #3867d6;
+            border-radius: 4px;
+            color: white;
+            margin-top: 15px;
+        }
+    </style>
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="loginForm">
+        <div class="loginHeader">LOGIN</div>
+        <form action="/login" method="POST">
+            <div class="input-group">
+                <input type="text" name="login" placeholder="Login">
+                <input type="password" name="password" placeholder="Password">
+                <button class="loginButton" type="submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
