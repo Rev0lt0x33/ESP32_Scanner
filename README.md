@@ -1,7 +1,7 @@
 # ESP32 Wi-Fi Probe Request Scanner
 
 This project implements a **Wi-Fi probe request scanner** on the ESP32.  
-It listens for probe requests from nearby Wi-Fi devices and extracts their **MAC addresses**, which are then sent to a remote server.  
+It listens for probe requests from nearby Wi-Fi devices and extracts their **MAC addresses**, which are then sent to a [remote server](https://github.com/Rev0lt0x33/ESP32_Scanner_UserApp).  
 
 The device also includes a built-in **configuration web server** that allows you to set the destination server address and other parameters without reflashing.
 
