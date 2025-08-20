@@ -16,3 +16,8 @@ The device also includes a built-in **configuration web server** that allows you
 
 ---
 
+## Disclaimer
+The system only collects information that is already present in the standard  
+**IEEE 802.11 probe request frame**, such as:
+- Device MAC address  
+- Timestamp of detection  
